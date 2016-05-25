@@ -9,11 +9,11 @@
         array (
             // Demo User
             array (
-                'username'  => 'jdoe',
-                'password'  => 'kitten',
-                'email'     => 'johndoe@gmail.com',
-                'firstName' => 'John',
-                'lastName'  => 'Doe',
+                'username'  => 'elizabeth',
+                'password'  => 'banana',
+                'email'     => 'elizabeth@gmail.com',
+                'firstName' => 'Elizabeth',
+                'lastName'  => 'Phillips',
                 'role'      => array(
                     'ROLE_USER',
                 ),

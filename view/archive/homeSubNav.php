@@ -3,9 +3,8 @@
         <div class="col-md-3">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="nav-header">Blog Entries</li>
-              <li class="active"><a href="<?php print APP_DOC_ROOT . '/home/create'; ?>">Create a New Entry</a></li>
-              <!-- not needed here
+              <li class="nav-header">Sidebar Category 1</li>
+              <li class="active"><a href="<?php print APP_DOC_ROOT . '/home/contact'; ?>">Contact Us</a></li>
               <li><a href="#">Link</a></li>
               <li><a href="#">Link</a></li>
               <li><a href="#">Link</a></li>
@@ -16,7 +15,6 @@
               <li><a href="#">Link</a></li>
               <li><a href="#">Link</a></li>
               <li><a href="#">Link</a></li>
-               -->
             </ul>
           </div>
         </div>

@@ -9,13 +9,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">My Blog</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#">Menu 1</a></li>
-            <li><a href="#">Menu 2</a></li>
-            <li><a href="#">Menu 3</a></li>
+            <!-- here's the main nav bar options -->
+
+            <li><a href="<?php print APP_DOC_ROOT . '/home'; ?>">Home</a></li>
+            <li><a href="<?php print APP_DOC_ROOT . '/archive'; ?>">View Archive</a></li>
+
+            <!-- <li><a href="#">Menu 3</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu 4 <b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -26,7 +29,7 @@
                 <li class="dropdown-header">Nav header</li>
                 <li><a href="#">Separated link</a></li>
                 <li><a href="#">One more separated link</a></li>
-              </ul>
+              </ul> -->
             </li>
           </ul>
 
