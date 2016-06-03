@@ -1,29 +1,21 @@
+<!-- page content -->
+<!-- this is the default view which displays all blog entries in shortened form -->
+       <div class="col-md-9">
+         <div class="pageContent">
 
-        <!-- page content -->
-        <div class="col-md-9">
-          <div class="well pageContent">
-            <table class="table table-striped table-condensed table-hover">
-              <thead>
-                <tr>
-                  <th>Category</th>
-                  <th>Name</th>
-                  <th>Description</th>
-                  <th>Qty</th>
-                  <th>Price</th>
-                </tr>
-              </thead>
-              <tbody>
+           <?php while($entry = $dbObj->dbFetch("assoc")) { ?>
+              <h4>
+              <?php print $entry['id']; ?>
 
-<?php while($entry = $dbObj->dbFetch("assoc")) { ?>
-                <tr>
-                  <td><?php print $entry['id']; ?></td>
-                  <td><?php print $entry['date']; ?></td>
-                  <td><?php print $entry['title']; ?></td>
-                  <td><?php print $entry['text']; ?></td>
-                </tr>
-<?php } ?>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <!-- end page content -->
+<!-- <a href="<?php echo APP_DOC_ROOT . '/archive/displayView/' . $entry['id']; ?>" > <?php print $entry['title']; ?> </a>-->
+              <?php print $entry['title']; ?>
+              </h4>
+              <!-- <button id= "select" type="submit" name="submit" class="btn btn-default" onclick="select(<?php print $entry['id']; ?>)" ><?php print $entry['title']; ?></button>-->
+             <p><?php print displayEntry($entry['entry']); ?></p>
+             <small>Posted: <?php print $entry['entry_date']; ?></small>
+             <br><br>
+           <?php } ?>
+
+         </div>
+       </div>
+       <!-- end page content -->

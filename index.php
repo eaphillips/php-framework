@@ -12,6 +12,8 @@ session_start();
 // Intitalize Flash Message
 $_SESSION['flashMessage'] = null;
 
+// Initialize a selection variable
+global $select_id;
 
 // User security check
 defined('APP_AUTH_TYPE') or

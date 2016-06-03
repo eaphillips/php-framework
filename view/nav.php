@@ -16,7 +16,7 @@
             <!-- here's the main nav bar options -->
 
             <li><a href="<?php print APP_DOC_ROOT . '/home'; ?>">Home</a></li>
-            <li><a href="<?php print APP_DOC_ROOT . '/archive'; ?>">View Archive</a></li>
+            <li><a href="<?php print APP_DOC_ROOT . '/archive'; ?>">Archive</a></li>
 
             <!-- <li><a href="#">Menu 3</a></li>
             <li class="dropdown">

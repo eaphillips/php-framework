@@ -5,8 +5,8 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Blog Entries</li>
-              <li class="active"><a href="<?php print APP_DOC_ROOT . '/archive/change'; ?>">Change an Entry</a></li>
-              <li class="active"><a href="<?php print APP_DOC_ROOT . '/archive/delete'; ?>">Delete an Entry</a></li>
+              <li class="active"><a href="<?php print APP_DOC_ROOT . '/archive/change'; ?>">Change Entry</a></li>
+              <li class="active"><a href="<?php print APP_DOC_ROOT . '/archive/delete'; ?>">Delete Entry</a></li>
               <!-- sub navigation
               <li><a href="#">Link</a></li>
               <li><a href="#">Link</a></li>

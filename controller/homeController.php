@@ -10,24 +10,38 @@ include( APP_VIEW . '/nav.php' );
 switch ( $route->getAction() ) {
 
     case 'create':
-      if (isset($_POST['submit'])) {
-        print '<pre>';
-        print_r($_POST);
-        print '</pre>';
+
+      if (isset($_POST['submit']))
+       {
+
+         // Create database connection
+                 $dbObj = new db();
+                 // Insert new entry into DB
+                 $sql = "INSERT INTO blog_entries
+                         (entry_date, title, entry)
+                         VALUES
+                         (?, ?, ?)";
+                 $dbObj->dbPrepare($sql);
+                 $dbObj->dbExecute([
+                   date('Y-m-d'),
+                   $_POST['title'],
+                   $_POST['entry']
+                 ]);
+                 include( APP_VIEW .'/home/homeSubNav.php' );
+                 include( APP_VIEW .'/home/createView.php' );
+
       } else {
+
         include( APP_VIEW .'/home/homeSubNav.php' );
         include( APP_VIEW .'/home/createView.php' );
       }
         break;
 
-    //case 'home':
-      //  include( APP_VIEW .'/home/homeSubNav.php' );
-        //include( APP_VIEW .'/home/homeView.php' );
-        //break;
 
     default:
+
         include( APP_VIEW .'/home/homeSubNav.php' );
-        include( APP_VIEW .'/home/homeView.php' );
+        include( APP_VIEW .'/home/createView.php' );
         break;
 }
 
