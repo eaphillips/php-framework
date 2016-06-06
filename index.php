@@ -40,10 +40,6 @@ switch ( $route->getController() ) {
         include( APP_CONTROLLER . '/archiveController.php');
         break;
 
-    //case 'home':
-    //    include( APP_CONTROLLER . '/homeController.php');
-    //    break;
-
     default:
         include( APP_CONTROLLER . '/homeController.php');
         break;

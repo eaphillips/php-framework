@@ -1,19 +1,39 @@
 <!-- page content -->
-<!-- this is the default view which displays all blog entries in shortened form -->
+<!-- this is the default/display view which displays all blog entries in shortened form -->
        <div class="col-md-9">
          <div class="pageContent">
 
            <?php while($entry = $dbObj->dbFetch("assoc")) { ?>
               <h4>
-              <?php print $entry['id']; ?>
+              <!-- print db ID# for debugging purposes -->
+              <!-- <?php print $entry['id']; ?> -->
 
-<!-- <a href="<?php echo APP_DOC_ROOT . '/archive/displayView/' . $entry['id']; ?>" > <?php print $entry['title']; ?> </a>-->
-              <?php print $entry['title']; ?>
+                <?php print $entry['title']; ?>
               </h4>
-              <!-- <button id= "select" type="submit" name="submit" class="btn btn-default" onclick="select(<?php print $entry['id']; ?>)" ><?php print $entry['title']; ?></button>-->
-             <p><?php print displayEntry($entry['entry']); ?></p>
-             <small>Posted: <?php print $entry['entry_date']; ?></small>
-             <br><br>
+
+              <p>
+                <?php print displayEntry($entry['entry']); ?>
+
+                <!-- <a class="btn btn-link btn-xs" href="<?php print APP_DOC_ROOT . '/archive/select/' . $entry['id']; ?>">more</a> -->
+                <a class="<?php
+                if (strlen($entry['entry']) > 100)
+                {
+                  print 'btn btn-link btn-xs';
+                }
+                else
+                {
+                  print 'btn hide';
+                } ?>" href="<?php print APP_DOC_ROOT . '/archive/select/' . $entry['id']; ?>">more</a>
+
+              </p>
+
+              <small>Posted: <?php print $entry['entry_date']; ?></small>
+
+              <!-- 3 buttons to allow selection of post to view, change or delete -->
+              <!--<a class="btn btn-default btn-xs" href="<?php print APP_DOC_ROOT . '/archive/select/' . $entry['id']; ?>">View</a> -->
+              <a class="btn btn-default btn-xs" href="<?php print APP_DOC_ROOT . '/archive/change/' . $entry['id']; ?>">Change</a>
+              <a class="btn btn-default btn-xs" href="<?php print APP_DOC_ROOT . '/archive/delete/' . $entry['id']; ?>">Delete</a>
+              <br><br>
            <?php } ?>
 
          </div>

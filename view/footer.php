@@ -3,10 +3,10 @@
     </div><!-- end page container -->
 
     <?php if ( 1 <= APP_DEBUG_LEVEL ) { include('debug.php'); } ?>
-    
+
     <div id="footer">
           <div class="container">
-            <p class="text-muted">Footer content here.</p>
+          <!--  <p class="text-muted">Footer content here.</p> -->
           </div>
         </div>
 
@@ -16,5 +16,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
+    <!-- js code to validate form data -->
+    <script src="<?php print APP_JSCRIPT . '/validate.js'; ?>"></script>
   </body>
 </html>
